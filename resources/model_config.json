@@ -1,0 +1,91 @@
+{
+  "name": "lenet",
+  "input_shape": [
+    1,
+    28,
+    28
+  ],
+  "layers": [
+    {
+      "type": "conv2d",
+      "name": "conv1",
+      "in_channels": 1,
+      "out_channels": 6,
+      "kernel_size": 5,
+      "weight_shape": [
+        6,
+        1,
+        5,
+        5
+      ],
+      "bias_shape": [
+        6
+      ],
+      "weight_file": "conv1_weight.bin",
+      "bias_file": "conv1_bias.bin"
+    },
+    {
+      "type": "conv2d",
+      "name": "conv2",
+      "in_channels": 6,
+      "out_channels": 16,
+      "kernel_size": 5,
+      "weight_shape": [
+        16,
+        6,
+        5,
+        5
+      ],
+      "bias_shape": [
+        16
+      ],
+      "weight_file": "conv2_weight.bin",
+      "bias_file": "conv2_bias.bin"
+    },
+    {
+      "type": "linear",
+      "name": "fc_0",
+      "in_features": 400,
+      "out_features": 120,
+      "weight_shape": [
+        120,
+        400
+      ],
+      "bias_shape": [
+        120
+      ],
+      "weight_file": "fc_0_weight.bin",
+      "bias_file": "fc_0_bias.bin"
+    },
+    {
+      "type": "linear",
+      "name": "fc_2",
+      "in_features": 120,
+      "out_features": 84,
+      "weight_shape": [
+        84,
+        120
+      ],
+      "bias_shape": [
+        84
+      ],
+      "weight_file": "fc_2_weight.bin",
+      "bias_file": "fc_2_bias.bin"
+    },
+    {
+      "type": "linear",
+      "name": "fc_4",
+      "in_features": 84,
+      "out_features": 10,
+      "weight_shape": [
+        10,
+        84
+      ],
+      "bias_shape": [
+        10
+      ],
+      "weight_file": "fc_4_weight.bin",
+      "bias_file": "fc_4_bias.bin"
+    }
+  ]
+}

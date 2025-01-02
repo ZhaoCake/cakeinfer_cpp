@@ -1,0 +1,6 @@
+__pycache__/
+build/
+.vscode/
+.xmake/
+resources/test/
+resources/mnist
